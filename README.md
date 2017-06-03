@@ -85,8 +85,9 @@ $ make distribute
 ```{r, engine='bash', code_block_name}
 $ vi ~/.bash_profile
 ```
+Add this line
 ```
-export PYTHONPATH=<caffe-home>/python:$PYTHONPATH
+export PYTHONPATH=<caffe_home>/python:$PYTHONPATH
 ```
 ```{r, engine='bash', code_block_name}
 $ source ~/.bashrc
