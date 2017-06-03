@@ -96,6 +96,16 @@ $ source ~/.bashrc
 $ python 
 >>> import caffe
 ```
+If you see the following error message, you'd better revisit #3. 
+```{r, engine='bash', code_block_name}
+>>> Segmentation fault: 11
+```
+
+Cheers. 
+
+UT Southwestern Medical Center
+Tatsuya Arai
+06/03/2016
 
 
 
