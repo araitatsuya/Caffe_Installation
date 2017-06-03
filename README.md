@@ -1,5 +1,6 @@
 # Caffe_Installation
 Mac OS Sierra. v10.12.5.
+Xcode v8.1 (8B62)
 Python. v2.7.13.
 Homebrew Package Manager.
 
