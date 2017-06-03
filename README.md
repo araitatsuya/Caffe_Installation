@@ -1,7 +1,7 @@
 # Caffe_Installation
-Mac OS Sierra. v10.12.5
-Python. v2.7.13
-Homebrew Package Manager
+Mac OS Sierra. v10.12.5.
+Python. v2.7.13.
+Homebrew Package Manager.
 
 1
 http://d.hatena.ne.jp/shu223/touch/20160105/1451952796
