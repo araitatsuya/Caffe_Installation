@@ -1,6 +1,6 @@
 # Caffe_Installation
 
-It is very fun to test out Deepdream. However, installation of Caffe is a bit headache.  
+It is very fun to test out Deepdream. However, the installation of Caffe is a headache.  
 
 
 Mac OS Sierra. v10.12.5.
