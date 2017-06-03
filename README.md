@@ -25,7 +25,6 @@ Or 1 They tweaked opencv.
 
 http://installing-caffe-the-right-way.wikidot.com/start
 
-We will need to edit the OpenCV installation file a bit.
 ```{r, engine='bash', code_block_name}
   $ brew edit opencv
 ```
@@ -70,6 +69,7 @@ The following two lines are very important.
 ```
 If the paths are not correct, the compiler will be upset as it can not find Python.h and/or numpy/arrayobject.h. 
 Even if it is seemingly compiled, python may not import caffe. (Error: Segmentation fault: 11)
+Please take a look at my example. It worked. 
 
 4 Compile
 ```{r, engine='bash', code_block_name}
