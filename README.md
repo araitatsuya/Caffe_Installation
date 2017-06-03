@@ -5,18 +5,12 @@ Homebrew Package Manager
 
 1
 http://d.hatena.ne.jp/shu223/touch/20160105/1451952796  
-
-  $ brew install --fresh -vd snappy leveldb gflags glog szip lmdb
-  
-  $ brew tap homebrew/science
-  
-  $ brew install hdf5 opencv
-  
-  $ brew install --build-from-source --with-python --fresh -vd protobuf
-  
-  $ brew install --build-from-source --fresh -vd boost boost-python
-  
-  $ brew install openblas
+    $ brew install --fresh -vd snappy leveldb gflags glog szip lmdb
+    $ brew tap homebrew/science
+    $ brew install hdf5 opencv
+    $ brew install --build-from-source --with-python --fresh -vd protobuf
+    $ brew install --build-from-source --fresh -vd boost boost-python
+    $ brew install openblas
 It worked. 
   
 Or 1
