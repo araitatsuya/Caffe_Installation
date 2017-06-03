@@ -1,4 +1,8 @@
 # Caffe_Installation
+
+It is very fun to test out Deepdream. However, installation of Caffe is a bit headache.  
+
+
 Mac OS Sierra. v10.12.5.
 Xcode v8.1 (8B62)
 Python. v2.7.13.
@@ -6,6 +10,7 @@ Homebrew Package Manager.
 
 1
 http://d.hatena.ne.jp/shu223/touch/20160105/1451952796
+(in Japanese)
 ```{r, engine='bash', code_block_name}
     $ brew install --fresh -vd snappy leveldb gflags glog szip lmdb
     $ brew tap homebrew/science
@@ -14,9 +19,9 @@ http://d.hatena.ne.jp/shu223/touch/20160105/1451952796
     $ brew install --build-from-source --fresh -vd boost boost-python
     $ brew install openblas
 ```
-It worked. 
+It worked for me. 
   
-Or 1 They tweaked opencv.
+Or 1 They tweaked opencv. 
 
 http://installing-caffe-the-right-way.wikidot.com/start
 
@@ -49,6 +54,7 @@ Install boost libraries for python.
 ```{r, engine='bash', code_block_name}
   $ git clone https://github.com/BVLC/caffe.git
 ```
+This is <caffe_home> directry. 
 
 3 Edit the Makefile.config (Very Important!)
 ```{r, engine='bash', code_block_name}
@@ -59,11 +65,11 @@ The following two lines are very important.
 ```{r, engine='bash', code_block_name}
     PYTHON_INCLUDE := /usr/include/python2.7 \
     ...
-    PYTHON_LIB := /usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/
+    PYTHON_LIB := /usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/
     ...
 ```
-If the paths are not correct, compiler will be upset as Python.h and/or numpy/arrayobject.h will be missing. 
-Even if it is seemingly compiled, python will not import caffe. (e.g. Segmentation fault: 11)
+If the paths are not correct, the compiler will be upset as it can not find Python.h and/or numpy/arrayobject.h. 
+Even if it is seemingly compiled, python may not import caffe. (Error: Segmentation fault: 11)
 
 4 Compile
 ```{r, engine='bash', code_block_name}
