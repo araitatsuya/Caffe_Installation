@@ -15,7 +15,7 @@ http://d.hatena.ne.jp/shu223/touch/20160105/1451952796
 ```
 It worked. 
   
-Or 1
+Or 1 They tweaked opencv.
 
 http://installing-caffe-the-right-way.wikidot.com/start
 
@@ -54,4 +54,51 @@ Install boost libraries for python.
   $ cd caffe
   $ cp Makefile.config.example Makefile.config
 ```
+The following two lines are very important. 
+```{r, engine='bash', code_block_name}
+    PYTHON_INCLUDE := /usr/include/python2.7 \
+    ...
+    PYTHON_LIB := /usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/
+    ...
+```
+If the paths are not correct, compiler will be upset as Python.h and/or numpy/arrayobject.h will be missing. 
+Even if it is seemingly compiled, python will not import caffe. (e.g. Segmentation fault: 11)
+
+4 Compile
+```{r, engine='bash', code_block_name}
+$ make clean
+$ make all -j4
+$ make test -j4
+$ make runtest
+```
+5 Build PyCaffe
+```{r, engine='bash', code_block_name}
+$ cd python/
+$ for li in $(cat requirements.txt); do sudo pip install $li; done 
+```
+```{r, engine='bash', code_block_name}
+$ cd ../
+$ make pycaffe
+$ make distribute
+```
+5 Path for caffe
+```{r, engine='bash', code_block_name}
+$ vi ~/.bash_profile
+```
+```
+export PYTHONPATH=<caffe-home>/python:$PYTHONPATH
+```
+```{r, engine='bash', code_block_name}
+$ source ~/.bashrc
+```
+6 Hope this works
+```{r, engine='bash', code_block_name}
+$ python 
+>>> import caffe
+```
+
+
+
+
+
 
